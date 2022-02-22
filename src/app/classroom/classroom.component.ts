@@ -8,6 +8,7 @@ export class ClassroomComponent{
   color = "color:red";
   @Input("name") name !:string;
   @Input("numberOfStudents") numberOfStudents !:number;
+  @Input("teacher") teacher !:any;
 }
 // Viết 1 component Teacher gồm các giá trị: name, age, tel, address
 // và gọi vào trong classroom
