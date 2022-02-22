@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component,Input} from "@angular/core";
 
 @Component({
   selector:"student",
@@ -6,6 +6,7 @@ import {Component} from "@angular/core";
   templateUrl:"./student.component.html"
 })
 export class StudentComponent{
-
+  @Input("name") name!:string;
+  @Input("tel") tel!:string;
 }
 // tạo 1 component lớp học Classroom hiển thị ra 5 sinh viên trong lớp
