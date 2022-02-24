@@ -1,10 +1,8 @@
 <h2>Sĩ số lớp: {{numberOfStudents}}</h2>
 <input type="number" [(ngModel)]="numberOfStudents" placeholder="Number of students" />
+<button type="button" (click)="changeNumber()">Add Student</button>
 <h2>Giáo viên:</h2>
 <teacher [name]="teacher.name" [age]="teacher.age" [tel]="teacher.tel" [address]="teacher.address"></teacher>
 <h1 [style]="color">Danh sách sinh viên lớp {{name}}:</h1>
-<student name="Bùi Anh Tuấn" tel="0987654311"></student>
-<student name="Bùi Anh Tuấn1" tel="0987654312"></student>
-<student name="Bùi Anh Tuấn2" tel="0987654313"></student>
-<student name="Bùi Anh Tuấn3" tel="0987654314"></student>
-<student name="Bùi Anh Tuấn4" tel="0987654315"></student>
+<student *ngFor="let s of students" [name]="s.name" [tel]="s.tel"></student>
+

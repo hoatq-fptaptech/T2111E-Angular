@@ -7,10 +7,13 @@ import {ClassroomComponent} from "./classroom/classroom.component";
 import {FormsModule} from "@angular/forms";
 import {TeacherComponent} from "./teacher/teacher.component";
 import {SchoolComponent} from "./school/school.component";
+import {HeaderComponent} from "./header/header.component";
+import {NavComponent} from "./nav/nav.component";
+import {SidebarComponent} from "./sidebar/sidebar.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,HeaderComponent,NavComponent,SidebarComponent,
     StudentComponent,ClassroomComponent,TeacherComponent,
     SchoolComponent
   ],

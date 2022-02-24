@@ -1,6 +1,9 @@
 <div class="teacher">
   <h2>{{name}}</h2>
-  <h3>{{age}} tuổi</h3>
+  <h3>
+    <span *ngIf="age<=20" style="color:green">{{age}} tuổi</span>
+    <span *ngIf="age>20" style="color:red">{{age}} tuổi</span>
+  </h3>
   <h3>SDT: {{tel}}</h3>
   <p>{{address}}</p>
 </div>
