@@ -10,16 +10,25 @@ import {SchoolComponent} from "./school/school.component";
 import {HeaderComponent} from "./header/header.component";
 import {NavComponent} from "./nav/nav.component";
 import {SidebarComponent} from "./sidebar/sidebar.component";
+import {AdmissionsComponent} from "./admissions/admissions.component";
+import {RouterModule, Routes} from "@angular/router";
+import {JobsComponent} from "./jobs/jobs.component";
 
+const appRoutes: Routes = [
+  {path:"",component:SchoolComponent},
+  {path:"tuyensinh",component:AdmissionsComponent},
+  {path:"vieclam",component:JobsComponent},
+];
 @NgModule({
   declarations: [
     AppComponent,HeaderComponent,NavComponent,SidebarComponent,
     StudentComponent,ClassroomComponent,TeacherComponent,
-    SchoolComponent
+    SchoolComponent,AdmissionsComponent,JobsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
